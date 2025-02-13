@@ -8,17 +8,17 @@ buscar peliculas por su nombre, clasificación, editar y eliminar registros, des
   -MySQL
   -Spring web 
   -GitHub
-*1.Clonar este repositorio*
+##*1.Clonar este repositorio*
   git clone https://github.com/Brismi03/AdministracionPeliculas.git
   cd AdministracionPeliculas
-*2. Configurar la BD*
+##*2. Configurar la BD*
   -Crear una BD con el nombre 'adminpeliculas' 
   -Importar el archivo que esta en BD/Dump20250212.sql
-*3. Editar application.properties*
+##*3. Editar application.properties*
   spring.datasource.url=jdbc:mysql://localhost:3306/adminpeliculas
   spring.datasource.username=TU_USUARIO
   spring.datasource.password=TU_CONTRASEÑA
-*Principales Endpoints* 
+##*Principales Endpoints* 
 GET - http://localhost:9000/PeliculasWs/listar -- Obtiene todas las peliculas
 POST -http://localhost:9000/PeliculasWs/guardar --Agregar una nueva pelicula 
 POST - http://localhost:9000/PeliculasWs/buscar -- Obtiene peliculas por ID 
