@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "73ac7eb1-479a-42f4-a129-cc182bece08f",
+		"name": "Peliculas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39398803"
+	},
+	"item": [
+		{
+			"name": "Guardar Peli",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Spiderman\",\r\n        \"imagen\": \"https://es.web.img2.acsta.net/img/4a/a3/4aa3265d76c8d07e0315f48a76205386.jpg\",\r\n        \"duracion\": \"150\",\r\n        \"clasificacion\": \"B\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/PeliculasWs/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"PeliculasWs",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listar Pelis",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/PeliculasWs/listar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"PeliculasWs",
+						"listar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Peli",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "2",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/PeliculasWs/buscar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"PeliculasWs",
+						"buscar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Editar Peli",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id_pelicula\": 7,\r\n        \"nombre\": \"Garfield\",\r\n        \"imagen\": \"https://pics.filmaffinity.com/Flow_un_mundo_que_salvar-382508168-large.jpg\",\r\n        \"duracion\": \"160\",\r\n        \"clasificacion\": \"R\",\r\n        \"horarios\": [\r\n            {\r\n                \"id_horario\": 7,\r\n                \"fecha\": \"2025-02-14\",\r\n                \"horario\": \"14:00:00\"\r\n            },\r\n            {\r\n                \"id_horario\": 8,\r\n                \"fecha\": \"2025-02-13\",\r\n                \"horario\": \"20:00:00\"\r\n            }\r\n        ]\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/PeliculasWs/editar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"PeliculasWs",
+						"editar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Nombre Peli",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"nombre\": \"Spiderman\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/PeliculasWs/buscarByNombre",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"PeliculasWs",
+						"buscarByNombre"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar por Clasificacion Peli",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"clasificacion\": \"B\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/PeliculasWs/buscarByClasificacion",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"PeliculasWs",
+						"buscarByClasificacion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Peli",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id_pelicula\": 11,\r\n        \"nombre\": \"Spiderman\",\r\n        \"imagen\": \"https://es.web.img2.acsta.net/img/4a/a3/4aa3265d76c8d07e0315f48a76205386.jpg\",\r\n        \"duracion\": \"150\",\r\n        \"clasificacion\": \"B\",\r\n        \"horarios\": []\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/PeliculasWs/eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"PeliculasWs",
+						"eliminar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Guardar Horario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\": \"2025-03-01\",\r\n    \"horario\": \"13:00:00\",\r\n    \"pelicula\": {\r\n        \"id_pelicula\": 1\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/HorarioWs/guardar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"HorarioWs",
+						"guardar"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
