@@ -25,23 +25,23 @@ public class PeliculasWs {
 		var lista = peliculasServ.listar();
 		return lista;
 	}
-	//http://localhost:9000/HospitalWs/buscar
+	//http://localhost:9000/PeliculasWs/buscar
 	@PostMapping("buscar")
 	public Peliculas buscar(@RequestBody Long id) {
 		Peliculas pelicula = peliculasServ.buscar(id); 
 		return pelicula; 
 	}
-	//http://localhost:9000/HospitalWs/guardar
+	//http://localhost:9000/PeliculasWs/guardar
 	@PostMapping("guardar")
 	public void guardar(@RequestBody Peliculas peliculas) {
 		peliculasServ.guardar(peliculas);
 	}
-	//http://localhost:9000/HospitalWs/editar
+	//http://localhost:9000/PeliculasWs/editar
 	@PostMapping("editar")
 	public void editar(@RequestBody Peliculas peliculas) {
 		peliculasServ.editar(peliculas);
 	}
-	//http://localhost:9000/PeliculasWs/listar
+	//http://localhost:9000/PeliculasWs/eliminar
 	@PostMapping("eliminar")
 	public void eliminar(@RequestBody Peliculas peliculas) {
 		peliculasServ.eliminar(peliculas);
